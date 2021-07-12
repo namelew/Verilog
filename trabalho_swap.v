@@ -15,7 +15,8 @@ reg y0, y1; // saidas flip-flop
 wire Y0, Y1; // circuitos de excitacao
 
 Y0 = (w & ~y0) + (y1 & ~y0);
-Y1 = y1 xor y0; // alterar
+Y1 = y1 ^ y0;
+    
 
 
 endmodule
