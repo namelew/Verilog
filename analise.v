@@ -7,7 +7,7 @@ module analise (
 reg Q0, Q1; // saidas do flip-flop
 wire D0, D1;  // entradas do flip-flop
 
-assign D0 = ent xor Q0; // associando a porta logica ao wire
+assign D0 = ent ^ Q0; // associando a porta logica ao wire
 assign D1 = ~ent & Q1+ent & Q0 & ~Q1+ent & ~Q0 & Q1;
 assign y = QO & Q1;
 
