@@ -8,13 +8,19 @@ reg Q0, Q1; // saidas do flip-flop
 wire D0, D1;  // entradas do flip-flop
 
 assign D0 = ent ^ Q0; // associando a porta logica ao wire
-assign D1 = ~ent & Q1+ent & Q0 & ~Q1+ent & ~Q0 & Q1;
-assign y = QO & Q1;
+assign D1 = (~ent & Q1) + (ent & Q0 & ~Q1) + (ent & ~Q0 & Q1);
+assign y = Q0 & Q1;
 
 //funcionamento do flip-flop
-always @(posedge clk) begin
-    Q0 = D0;
-    Q1 = D1;
+always @(posedge clk or rst) begin
+    if(rst == 1) begin
+        Q0 <= 0;
+        Q1 <= 0;
+    end
+    else begin
+        Q0 = D0;
+        Q1 = D1; 
+    end
 end
 endmodule
 //---------------------------------------------

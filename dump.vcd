@@ -1,5 +1,5 @@
 $date
-	Sun Jul 11 18:31:59 2021
+	Mon Jul 12 12:27:14 2021
 $end
 $version
 	Icarus Verilog
@@ -7,40 +7,90 @@ $end
 $timescale
 	1s
 $end
-$scope module testbrench $end
-$var wire 1 ! saida $end
-$var reg 1 " clk $end
-$var reg 1 # entrada $end
-$var reg 1 $ reset $end
-$scope module z $end
+$scope module testebrench $end
+$var wire 1 ! y0 $end
+$var reg 1 " clk0 $end
+$var reg 1 # ent0 $end
+$var reg 1 $ rst0 $end
+$scope module analise0 $end
+$var wire 1 % D0 $end
 $var wire 1 " clk $end
-$var wire 1 $ reset $end
-$var wire 1 # w $end
-$var wire 1 ! z $end
-$var reg 1 % y $end
+$var wire 1 # ent $end
+$var wire 1 $ rst $end
+$var wire 1 ! y $end
+$var wire 1 & D1 $end
+$var reg 1 ' Q0 $end
+$var reg 1 ( Q1 $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
+x(
+x'
+x&
 x%
 0$
 0#
 0"
-0!
-$end
-#2
 x!
+$end
+#1
+0&
+0!
+0%
+0(
+0'
+1$
+#2
+0$
+#3
+1%
 1#
 #4
-1!
-1%
-1"
-#6
-0"
-#8
-0!
-0#
-#10
+1&
 0%
+1'
 1"
+#5
+0"
+#7
+1&
+1%
+1(
+0'
+1"
+#8
+0"
+#10
+0&
+1!
+0%
+1'
+1"
+#11
+1&
+1%
+0#
+#13
+0&
+0%
+1#
+#14
+0"
+#16
+0!
+1%
+0(
+0'
+1"
+#17
+0"
+#18
+0%
+0#
+#19
+1"
+#20
+0"
+#21
